@@ -118,7 +118,7 @@ if len(simulation_mgr.found) > 0:
 ## Step 5 - Run the Script to Find the Flag
 We run the script and get the flag within a few seconds:
 ```console
-(angr) rmeinzecp@csse332-VirtualBox:~/Documents/ctfs/google_2020_re# python3 solve.py
+(angr) meinzecp@csse332-VirtualBox:~/Documents/ctfs/google_2020_re# python3 solve.py
 WARNING | 2020-08-23 15:13:00,365 | angr.state_plugins.symbolic_memory | The program is accessing memory or registers with an unspecified value. This could indicate unwanted behavior.
 WARNING | 2020-08-23 15:13:00,366 | angr.state_plugins.symbolic_memory | angr will cope with this by generating an unconstrained symbolic variable and continuing. You can resolve this by:
 WARNING | 2020-08-23 15:13:00,366 | angr.state_plugins.symbolic_memory | 1) setting a value to the initial state
