@@ -2,17 +2,18 @@
 
 ## Step 1 - Runing the File
 
+Run `a.out`
 ```console
 meinzecp@csse332-VirtualBox:~/Documents/ctfs/google_2020_re# ./a.out
 Flag: test
 FAILURE
 ```
 Not much here. Start using basic flag finding techniques.
-
 Using `ptrace`, `ltrace`, and `strace`, I could not find any flag in plaintext.
 
 ## Step 2 - Using Ghidra for Disassembly
 
+Open up Ghidra, start a new project, and import the file.
 ```c
 ulong main(void)
 
@@ -117,7 +118,7 @@ if len(simulation_mgr.found) > 0:
 ## Step 5 - Run the Script to Find the Flag
 We run the script and get the flag within a few seconds:
 ```console
-(angr) root@kali:/media/sf_CTFs/google/beginner# python3 solve.py
+(angr) rmeinzecp@csse332-VirtualBox:~/Documents/ctfs/google_2020_re# python3 solve.py
 WARNING | 2020-08-23 15:13:00,365 | angr.state_plugins.symbolic_memory | The program is accessing memory or registers with an unspecified value. This could indicate unwanted behavior.
 WARNING | 2020-08-23 15:13:00,366 | angr.state_plugins.symbolic_memory | angr will cope with this by generating an unconstrained symbolic variable and continuing. You can resolve this by:
 WARNING | 2020-08-23 15:13:00,366 | angr.state_plugins.symbolic_memory | 1) setting a value to the initial state
